@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="functions.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Whirlpool.c" />
+    <ClCompile Include="SDK\SDK.cpp">
+      <Filter>sdk</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="functions.h" />
+    <ClInclude Include="nessie.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Whirlpool.h" />
+    <ClInclude Include="SDK\SDK.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Squirrel.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="sdk">
+      <UniqueIdentifier>{30836074-1301-405e-9e6c-cea0d39c27df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
