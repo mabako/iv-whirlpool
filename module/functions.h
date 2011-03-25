@@ -28,7 +28,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "SDK\SDK.h"
+#include "SDK/SDK.h"
 #include <stdio.h>
 
 extern "C"

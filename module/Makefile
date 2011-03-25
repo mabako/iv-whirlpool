@@ -1,9 +1,9 @@
-CC = g++
-FLAGS = -m32 -shared -Wall -fPIC -I./
+CC = gcc
+FLAGS = -m32 -shared -Wall -fPIC -I./ -D_LINUX -fvisibility=hidden
 
 OUTFILE = whirlpool.so
 
-SRC = $(wildcard ./*.cpp ./SDK/*.cpp)
+SRC = $(wildcard ./*.c ./*.cpp ./SDK/*.cpp)
 
 all: whirlpool
 

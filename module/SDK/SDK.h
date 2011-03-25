@@ -10,7 +10,7 @@
 #ifndef _LINUX
 #define EXPORT extern "C" __declspec(dllexport)
 #else
-#define EXPORT extern "C"
+#define EXPORT extern "C" __attribute__((visibility("default")))
 #endif
 
 typedef void (* LogPrintf_t)(const char * szFormat, ...);
