@@ -33,6 +33,9 @@
 
 const char * g_szModuleName = "Whirlpool Module";
 
+#if !defined(WINDOWS) && !defined(_WIN32)
+  #define strcpy_s(a,b,c) strcpy(a,c)
+#endif
 /*
 	This function is called when the module was loaded.
 
@@ -42,7 +45,7 @@ const char * g_szModuleName = "Whirlpool Module";
 */
 EXPORT bool InitModule(char * szModuleName)
 {
-	strcpy(szModuleName, g_szModuleName);
+	strcpy_s(szModuleName, 64, g_szModuleName);
 	LogPrintf("Whirlpool Module 1.0 by mabako loaded.");
 
 	return true;

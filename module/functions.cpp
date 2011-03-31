@@ -30,6 +30,10 @@
 
 #include "functions.h"
 
+#if defined(WINDOWS) || defined(_WIN32)
+  #define sprintf(a,...) sprintf_s(a,sizeof(a),__VA_ARGS__)
+#endif
+
 int sq_whirlpool(HSQUIRRELVM pVM)
 {
 	if(sq_gettop(pVM) == 2)
